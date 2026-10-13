@@ -1,0 +1,35 @@
+AND TESTS
+True True = True
+True False = False
+False True = False
+False False = False
+
+OR TESTS
+True True = True
+True False = True
+False True = True
+False False = False
+
+NOT TESTS
+True = False
+False = True
+
+IMPLIES TESTS
+True True = True
+True False = False
+False True = True
+False False = True
+
+EXPRESSION TESTS
+('and', True, True) = True
+('or', False, True) = True
+('not', False) = True
+('implies', True, False) = False
+('and', True, ('not', False)) = True
+('or', False, ('and', True, ('not', False))) = True
+
+REQUIRED EXPR
+EXPR = True
+
+STEP 7 TEST
+ZeroDivisionError: division by zero
