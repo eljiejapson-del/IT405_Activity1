@@ -33,3 +33,6 @@ EXPR = True
 
 STEP 7 TEST
 ZeroDivisionError: division by zero
+
+
+Short Note: Step 7 failed with a diviion by zero because our evaluate function evaluates all sub-expressions first before passing it to the logical function. But Python's own or operator use short-circuiting, so it stops early when the first part is already True and never runs the 1/0. This show that our custom evaluator processes everything right away, while native Python operators skip unnecessary calculations.
